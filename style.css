@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: auto;
+    margin-left: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    color: #00c3ff;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.cart:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: scale(1.1);
+}
+
+.featured-brands {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 120px 20px;
+    color: white;
+}
+
+.featured-brands h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.featured-brands p {
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: 0.9;
+}
+
+/* Brand Container (Home Page) */
+.brand-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.brand {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.brand:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.watch-image-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+}
+
+.watch-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.brand:hover .watch-image-container img {
+    transform: scale(1.05);
+}
+
+.watch-info {
+    padding: 20px;
+}
+
+.watch-info h3 {
+    margin: 0 0 10px 0;
+    color: #222;
+    font-size: 18px;
+}
+
+.watch-maker {
+    color: #666;
+    font-size: 14px;
+    margin: 0 0 15px 0;
+}
+
+.brand em {
+    display: block;
+    color: gold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    width: 100%;
+    background: #00c3ff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background: #0088cc;
+}
+
+/* Trusted Seller Section */
+.trusted-seller {
+    background: #ffffff;
+    padding: 50px;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.trusted-seller h2 {
+    color: #222;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.trusted-seller p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: #666;
+}
+
+.trusted-seller ul {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+}
+
+.trusted-seller li {
+    font-size: 18px;
+    padding: 8px 0;
+    color: #00c3ff;
+    font-weight: 600;
+}
+
+/* Customer Reviews Section */
+.customer-reviews {
+    background: #00c3ff;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+.customer-reviews h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review {
+    background: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.review:hover {
+    transform: translateY(-5px);
+}
+
+/* Our Brands Page Styles */
+.brands-header {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.brands-header h1 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.brands-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.brand-logo {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.brand-logo:hover {
+    transform: translateY(-5px);
+}
+
+.brand-logo img {
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.brand-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.brand-logo h3 {
+    margin: 0;
+    color: #222;
+    font-size: 1.2rem;
+}
+
+/* Trending Watches Page Styles */
+.trending-header {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.trending-header h1 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.trending-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.trending-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.trending-watch {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.trending-watch:hover {
+    transform: translateY(-5px);
+}
+
+.trending-watch img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.trending-watch h3 {
+    margin: 15px 20px 5px;
+    color: #222;
+    font-size: 1.1rem;
+}
+
+.trending-watch p {
+    margin: 0 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.trending-watch em {
+    display: block;
+    margin: 10px 20px;
+    color: gold;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.trending-watch .add-to-cart {
+    margin: 15px 20px 20px;
+    width: calc(100% - 40px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .brand-container, .trending-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .nav-links {
+        margin: 20px 0;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .brand-container, .brands-grid, .trending-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-brands {
+        padding: 80px 20px;
+    }
+    
+    .featured-brands h1 {
+        font-size: 2rem;
+    }
+    
+    .featured-brands p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .trusted-seller, .customer-reviews {
+        padding: 30px 15px;
+    }
+    
+    .brands-header, .trending-header {
+        padding: 60px 15px 30px;
+    }
+}* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f7f9fc;
+    color: #333;
+  }
+  
+  header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.5rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #0a74da;
+    letter-spacing: 1px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.2rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #0a74da;
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-toggle div {
+    width: 24px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+      display: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  }
+  
